@@ -1,0 +1,33 @@
+<table class="table">
+    <tr>
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Price</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for Books in Books %}
+            <tr>
+                {% comment %} <td><a href = "{% url 'detail_book' Bookes.pk%}">{{ Bookes.id}}</a></td> {% endcomment %}
+                
+                <td>{{ Books.id}}</td>
+                <td>{{Books.name}}</td>
+                <td>{{Books.author}}</td>
+                <td>{{Books.price}}</td>
+                <td>{{Books.description}}</td>
+                <td>
+                    
+                    {% comment %} <a href = "{% url 'exam_update' exam.pk%}">Update</a>
+                    <a href = "{% url 'exam_delete' exam.pk%}">DELETE</a> {% endcomment %}
+                </td>
+                    
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+</table>
+

@@ -1,0 +1,23 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<div class="login-form">
+    <form method = "POST">
+    {% csrf_token %}
+    <h1>Login</h1>
+    <div>
+        {{form.username | as_crispy_field}}
+        </div>
+        <div>
+        {{form.password | as_crispy_field}}
+        </div>
+        <a href="#">Forgot Password?</a>
+    </div>
+    <div>
+        <input type = "submit" value="submit">
+        </div>
+    </form>
+</div>

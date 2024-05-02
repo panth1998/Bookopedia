@@ -1,0 +1,38 @@
+
+{% block container %}
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Book Details #{{ Books.id }}</h5>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">
+                    Book Name
+                </dt>
+                <dd class="col-sm-9">
+                    {{ Books.name }}
+                </dd>
+                <dt class="col-sm-3">
+                Book Description
+                </dt>
+                <dt class="col-sm-3">
+                    {{ Books.description }}
+                </dt>
+                <dt class="col-sm-3">
+                    Book price
+                </dt>
+                <dd class="col-sm-9">
+                    {{ Books.price }}
+                </dd>
+                <dt class="col-sm-3">
+                    Book Author
+                </dt>
+                <dd class="col-sm-9">
+                    {{ Books.author }}
+                </dd>
+                
+            
+            </dl>
+        </div>
+    </div>
+{% endblock %}
